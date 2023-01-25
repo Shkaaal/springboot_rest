@@ -37,7 +37,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 //        Session session = entityManager.unwrap(Session.class);
 
         Employee empFromDB = entityManager.merge(employee);
-        empFromDB.setId(employee.getId());
+        employee.setId(empFromDB.getId());
 
 //        session.saveOrUpdate(employee);
     }
